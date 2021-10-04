@@ -1,4 +1,8 @@
 import styled from "styled-components";
+const theme ={
+    gray: '#aca9a9',
+    orange: '#ec7532',
+}
 
 const Style = styled.div`
  .heading{
@@ -7,7 +11,7 @@ const Style = styled.div`
         text-transform: uppercase;
        padding:10px 15px;
        margin:20px 60px;
-       border: 1px solid #aca9a9; 
+       border: 1px solid ${theme.gray}; 
        border-radius:10px;
        font-size:12px;
      }
@@ -21,7 +25,7 @@ const Style = styled.div`
         .logo{
             font-size:30px;
             margin-right:30px;
-            color:#ec7532;
+            color:${theme.orange};
         }
         .logo-text{
             letter-spacing: 3px;
@@ -29,7 +33,7 @@ const Style = styled.div`
      }
  }
  .navbar-menu{
-     border-bottom:1px solid #aca9a9;
+     border-bottom:1px solid ${theme.gray};
      position: relative;
      & ul{
          display:flex;
@@ -42,7 +46,7 @@ const Style = styled.div`
          &:first-child::after{
             content:'';
              position: absolute;
-             border:2px solid #ec7532;
+             border:2px solid ${theme.orange};
              bottom:-1px;
              left:0;
              width:98px;

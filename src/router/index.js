@@ -1,6 +1,6 @@
 import { lazy,Suspense } from "react";
 import { Route,BrowserRouter,Switch } from "react-router-dom";
-import Loder from "../component/loder";
+import Loader from "../component/loader";
 const Home = lazy(() => import('../pages/home'));
 const Login = lazy(() => import('../pages/auth/login'));
 const UserProfile = lazy(() => import('../pages/auth/userProfile'));
@@ -9,7 +9,7 @@ const Details = lazy(() => import('../pages/details'));
 const MainRouter = () => {
     return(
         <BrowserRouter>
-        <Suspense fallback={<Loder/>}>
+        <Suspense fallback={<Loader/>}>
         <Switch>
          <Route path='/' exact>
           <Home/>
