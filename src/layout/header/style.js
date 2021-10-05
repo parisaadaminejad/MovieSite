@@ -3,15 +3,28 @@ const theme ={
     gray:'#aca9a9',
     orange:'#ec7532',
     white:'#ffffff',
+    black:'#000000'
 }
 
 const Style = styled.div`
 #header{
+   &.scroll {
+    position: sticky;
+    top:0;
+    background:${theme.black};
+    color:${theme.white};
+    }
+    &.scroll a{
+        color:${theme.white};
+    }
+    &.scroll .heading{
+        display:none;
+    }
     
  .heading{
     direction:rtl;
     & button{
-       text-transform: uppercase;
+      text-transform: uppercase;
       padding:10px 10px;
       margin:20px 60px;
       border: 1px solid ${theme.gray}; 
