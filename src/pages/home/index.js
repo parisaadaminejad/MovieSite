@@ -1,168 +1,21 @@
-import { Fragment } from "react";
-import { Link } from "react-router-dom";
+import { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../../layout/header';
-import Style from "../../layout/header/style";
+import Intro from '../../layout/intro'; 
+
+
 
 const Home = () => {
     return(
-      <Style>
-       {/* <p>Home</p> */}
-       <Header/>
-        {/* <Link to='/login'>Go to lagin</Link> */}
-        <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    llllllllllllllllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllll
+      <Fragment>      
+    <Header/>
+    <Intro/>
+    
+</Fragment>
 
-                </p>
-                <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    llllllllllllllllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllll
-
-                </p>
-                <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    llllllllllllllllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllll
-
-                </p>
-                <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    llllllllllllllllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllll
-
-                </p>
-                <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    llllllllllllllllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllll
-
-                </p>
-                <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    llllllllllllllllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllll
-
-                </p>
-                <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    llllllllllllllllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllll
-
-                </p>
-                <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    llllllllllllllllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllll
-
-                </p>
-                <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    llllllllllllllllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllll
-
-                </p>
-                <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    llllllllllllllllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllll
-
-                </p>
-                <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    llllllllllllllllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllll
-
-                </p>
-                <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    llllllllllllllllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllll
-
-                </p>
-                <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    llllllllllllllllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllll
-
-                </p>
-                <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    llllllllllllllllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllll
-
-                </p>
-                <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    llllllllllllllllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllll
-
-                </p>
-                <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    llllllllllllllllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllll
-
-                </p>
-                <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    llllllllllllllllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllll
-
-                </p>
-                <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    llllllllllllllllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllll
-
-                </p>
-                <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    llllllllllllllllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllll
-
-                </p>
-                <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    llllllllllllllllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllll
-
-                </p>
-                <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    llllllllllllllllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllll
-
-                </p>
-                <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    llllllllllllllllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllllllll
-                    lllllllllllllllllllllllllllllllllll
-
-                </p>
-                <p>sssss
-
-                </p>
-                <p>sssss
-
-                </p>
-                <p>sssss
-
-                </p>
-                <p>sssss
-
-                </p>
-                <p>sssss
-
-                </p>
-                <p>sssss
-
-                </p>
-                <p>sssss
-
-                </p>
-      </Style>
+     
+        
+        
         
     )
 }

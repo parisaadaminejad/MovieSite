@@ -1,4 +1,6 @@
 import styled from "styled-components";
+
+
 const theme ={
     gray:'#aca9a9',
     orange:'#ec7532',
@@ -8,6 +10,11 @@ const theme ={
 
 const Style = styled.div`
 #header{
+    .container{
+        /* width: 100%; */
+        margin: 0 40px;
+    }
+   
    &.scroll {
     position: sticky;
     top:0;
@@ -26,7 +33,7 @@ const Style = styled.div`
     & button{
       text-transform: uppercase;
       padding:10px 10px;
-      margin:20px 60px;
+      margin-top:20px;
       border: 1px solid ${theme.gray}; 
       border-radius:20px;
       font-size:12px;
@@ -36,7 +43,7 @@ const Style = styled.div`
 .navbar{
     display:flex;
     justify-content: space-between;
-    margin: 0 40px;
+    /* margin: 0 40px; */
     & .navbar-logo{
        text-transform: uppercase;
        .logo{

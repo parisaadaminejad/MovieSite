@@ -1,6 +1,7 @@
 import { lazy,Suspense } from "react";
 import { Route,BrowserRouter,Switch } from "react-router-dom";
 import Loader from "../component/loader";
+import Intro from "../layout/intro";
 const Home = lazy(() => import('../pages/home'));
 const Login = lazy(() => import('../pages/auth/login'));
 const UserProfile = lazy(() => import('../pages/auth/userProfile'));
