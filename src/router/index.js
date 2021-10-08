@@ -13,7 +13,7 @@ const MainRouter = () => {
         <Suspense fallback={<Loader/>}>
         <Switch>
          <Route path='/' exact>
-          <Home/>
+          <Home/> 
          </Route>
          <Route path='/login' exact>
           <Login/>

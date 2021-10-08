@@ -9,7 +9,7 @@ const Header = () => {
     const [scroll, setScroll] = useState(false);
  useEffect(() => {
    window.addEventListener("scroll", () => {
-     setScroll(window.scrollY > 230);
+     setScroll(window.scrollY > 130);
    });
  }, []);
 
@@ -19,8 +19,8 @@ const Header = () => {
              
             <header id='header' className={scroll ? 'scroll' :''}>
             <div className='container'>
-            <div className='heading'>
-                <button className='heading-btn'>login/register</button>
+            <div className='header-top'>
+                <button className='header-btn'><Link>login/register</Link></button>
             </div>
             <div className='navbar'>
                 <div className='navbar-logo'>

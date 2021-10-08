@@ -8,11 +8,10 @@ const theme ={
 }
 
 const Style = styled.div`
-    .container{
-        margin: 0 40px;
-    }
+   
     .slider{
-       overflow-x: hidden;
+       overflow: hidden;
+       position: relative;
       
     .slider-item{
         position: relative;
@@ -23,7 +22,7 @@ const Style = styled.div`
         background-position: center;
         background-size: cover; 
         &::after{
-            content: '';
+        content: '';
         position: absolute;
         top: 0;
         right: 0;
@@ -33,7 +32,7 @@ const Style = styled.div`
 
         }
         & .slider-title{
-            margin-top: 60px;
+            margin-top: 100px;
             span{
              text-transform: uppercase;
             color:${theme.orange};

@@ -10,25 +10,29 @@ const theme ={
 
 const Style = styled.div`
 #header{
-    .container{
-        /* width: 100%; */
-        margin: 0 40px;
-    }
-   
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    
    &.scroll {
-    position: sticky;
+    position: fixed;
     top:0;
+    left: 0;
     background:${theme.black};
     color:${theme.white};
+    transition: all .4s ease-in-out;
+    
     }
     &.scroll a{
         color:${theme.white};
     }
-    &.scroll .heading{
+    &.scroll .header-top{
         display:none;
     }
     
- .heading{
+ .header-top{
     direction:rtl;
     & button{
       text-transform: uppercase;
@@ -37,13 +41,15 @@ const Style = styled.div`
       border: 1px solid ${theme.gray}; 
       border-radius:20px;
       font-size:12px;
-      background:${theme.white};
+      background:none;
+      a{
+        color: ${theme.white};
+      }
     }
 }
 .navbar{
     display:flex;
     justify-content: space-between;
-    /* margin: 0 40px; */
     & .navbar-logo{
        text-transform: uppercase;
        .logo{
@@ -53,6 +59,7 @@ const Style = styled.div`
        }
        .logo-text{
            letter-spacing: 3px;
+           color: ${theme.white};
        }
     }
     .navbar-menu{
@@ -74,6 +81,7 @@ const Style = styled.div`
                 padding: 20px 24px;
                 letter-spacing: 3px;
                 text-transform: uppercase;
+                color: ${theme.white};
                }
             & a:hover{
                 color:${theme.orange};  
