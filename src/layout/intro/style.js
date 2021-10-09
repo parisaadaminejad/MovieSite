@@ -12,9 +12,6 @@ const Style = styled.div`
     .slider{
        overflow-x: hidden;
       
-       /* height: ; */
-       /* position: relative; */
-      
     .slider-item{
         position: relative;
         width: 100%;
@@ -33,12 +30,14 @@ const Style = styled.div`
 
         }
         & .slider-title{
-            margin-top: 100px;
+            position: absolute;
+            top: 150px;
+            z-index: 10;
             span{
              text-transform: uppercase;
             color:${theme.orange};
-            font-size: 14px;
-    letter-spacing: 2px;
+            font-size: 30px;
+            letter-spacing: 2px;
             }
             h1{
             font-size: 52px; 
@@ -73,13 +72,13 @@ const Style = styled.div`
                         border: 1px solid ${theme.orange};
                         text-transform: uppercase;
                         color: ${theme.white};
-                        padding: 12px 24px;
+                        padding: 12px 20px;
                         background: ${theme.orange};
-                        z-index: 9;
                     & span{
                         letter-spacing: 4px; 
                         color: ${theme.white};
                         padding-left: 10px;
+                        font-size: 14px;
                     }
      
                 }

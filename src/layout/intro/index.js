@@ -31,7 +31,7 @@ const Intro = (props) => {
     const result=get(movies,'results', [])
     return movies.map((item,index) => {
       console.log(item,'ytr')
-      const { id,original_title ,overview}= item
+      const { id,original_title ,overview,name}= item
       const imgUrl =`${imgServerUrl}${item.poster_path}`;
        
         return(
@@ -43,11 +43,11 @@ const Intro = (props) => {
           
            <div className='container'>
              <div className='slider-title'>
-                 <span>action,adventure,comedy</span>
+                 <span>{item.name}</span>
                  <h1>{item.original_title}</h1>
                  <p>{item.overview}</p>
                  <div className='slider-btn'>
-                   <span className='circle'>pg-13</span>
+                  
                    <Link className='slider-link' to={`/details/${id}`}>
                      <i className='fa fa-play'></i>
                      <span>play trailer</span>
@@ -76,7 +76,7 @@ const Intro = (props) => {
             
  
      
-           {RenderForm()}
+           <RenderForm/>
          </Slider>
         
         </Style>             
