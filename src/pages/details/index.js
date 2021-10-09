@@ -4,6 +4,7 @@ import {apiKey} from '../../constant';
 import { Link } from "react-router-dom";
 import {imgServerUrl} from '../../constant';
 import get from 'lodash/get';
+import Style from "./style";
 
 const Details = (props) => {
     const[details,setDetails]=useState([])
@@ -14,7 +15,7 @@ const Details = (props) => {
         .then((response)=> {return response.json()})
         .then(data => {
             console.log(data)
-            setDetails(data.results)
+            setDetails(data)
         })
         .catch(error => {
             console.log(error)
@@ -23,41 +24,32 @@ const Details = (props) => {
         })
     
     },[])
-
-    const RenderForm = () => {
-        const result=get(details,'results', [])
-        return result.map((item,index) => {
-          console.log(item,'details')
-          const { id,original_title ,overview,name}= item
-          const imgUrl =`${imgServerUrl}${item.poster_path}`;
+    const renderFarm =()=>{
+        const result=get(details,'data', [])
+        const { id,original_title ,overview,name}= details
+        const imgUrl =`${imgServerUrl}${details.poster_path}`;
+       
+        return(
+            <div className="imesg">
+ <img src={imgUrl}/>
+            </div>
            
-            return(
-            
-              <div className='slider-item' key={id} style={{
-              backgroundImage: `url(${imgUrl})`
+        )
+
+        
+    }
+
+  return(
+      <Style>
+   {renderFarm()}
+
+      </Style>
     
-              }}>
-              
-               <div className='container'>
-                 <div className='slider-title'>
-                     <span>{item.name}</span>
-                     <h1>{item.original_title}</h1>
-                     <p>{item.overview}</p>
-                    
-                 </div>
-               </div>
-               </div>
-              
-            )
-          
-          })
-        }
+  )
+   
+           
+        
     
     
-    
-    return(
-        // <p>details{id}</p>
-        <RenderForm/>
-    )
 }
 export default Details;

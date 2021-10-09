@@ -29,7 +29,8 @@ const Intro = (props) => {
  
   const RenderForm = () => {
     const result=get(movies,'results', [])
-    return movies.map((item,index) => {
+    const temp =movies.slice(0,6);
+    return temp.map((item,index) => {
       console.log(item,'ytr')
       const { id,original_title ,overview,name}= item
       const imgUrl =`${imgServerUrl}${item.poster_path}`;
