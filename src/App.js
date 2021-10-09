@@ -5,14 +5,13 @@ import 'slick-carousel/slick/slick-theme.css';
 import { Fragment } from 'react';
 import MainRouter from './router';
 import './App.css';
-
-
+import Intro from './layout/intro';
 
 
 function App() {
+
   return (
-  <Fragment>
-     
+  <Fragment> 
   <MainRouter/>
   </Fragment>
   );

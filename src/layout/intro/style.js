@@ -10,15 +10,16 @@ const theme ={
 const Style = styled.div`
    
     .slider{
-       overflow: hidden;
-       position: relative;
+       overflow-x: hidden;
+      
+       /* height: ; */
+       /* position: relative; */
       
     .slider-item{
         position: relative;
-        background-image: url('http://placekitten.com/g/400/200');
         width: 100%;
         height: 100%;
-        min-height: 600px;
+        min-height: 700px;
         background-position: center;
         background-size: cover; 
         &::after{
@@ -74,6 +75,7 @@ const Style = styled.div`
                         color: ${theme.white};
                         padding: 12px 24px;
                         background: ${theme.orange};
+                        z-index: 9;
                     & span{
                         letter-spacing: 4px; 
                         color: ${theme.white};
