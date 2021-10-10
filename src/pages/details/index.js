@@ -25,7 +25,7 @@ const Details = (props) => {
       });
   }, []);
   const renderFarm = () => {
-    const result = get(details, "data", []);
+    // const result = get(details, "data", []);
     const { id, original_title, overview, name, vote_average } = details;
     const imgUrl = `${imgServerUrl}${details.poster_path}`;
 
@@ -35,11 +35,11 @@ const Details = (props) => {
           <div className="detail-img">
             <img src={imgUrl} alt={name} />
           </div>
-          <div>
-            <h1>{original_title}</h1>
-            <p>{vote_average}</p>
-            <p>{overview}</p>
-          </div>
+        </div>
+        <div className="detail-title">
+          <h1>{original_title}</h1>
+          <p>{overview}</p>
+          <p>vote_avrege:{` ${Math.ceil(vote_average)}`}</p>
         </div>
       </Fragment>
     );

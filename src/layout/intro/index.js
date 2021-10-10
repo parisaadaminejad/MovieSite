@@ -44,7 +44,7 @@ const Intro = (props) => {
               <div className="slider-title">
                 <span>{name}</span>
                 <h1>{textDots(original_title, 10)}</h1>
-                <p>{textDots(overview, 20)}</p>
+                <p>{textDots(overview, 30)}</p>
                 <div className="slider-btn">
                   <Link className="slider-link" to={`/details/${id}`}>
                     <i className="fa fa-play"></i>
