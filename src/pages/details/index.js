@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import { Fragment, useEffect, useState } from "react";
 import { apiKey } from "../../constant";
 import { imgServerUrl } from "../../constant";
-import get from "lodash/get";
 import Header from "../../layout/header";
 import Style from "./style";
 
@@ -25,7 +24,6 @@ const Details = (props) => {
       });
   }, []);
   const renderFarm = () => {
-    // const result = get(details, "data", []);
     const { id, original_title, overview, name, vote_average } = details;
     const imgUrl = `${imgServerUrl}${details.poster_path}`;
 
@@ -38,6 +36,7 @@ const Details = (props) => {
         </div>
         <div className="detail-title">
           <h1>{original_title}</h1>
+
           <p>{overview}</p>
           <p>vote_avrege:{` ${Math.ceil(vote_average)}`}</p>
         </div>

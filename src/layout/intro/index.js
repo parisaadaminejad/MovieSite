@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
-import get from "lodash/get";
 import { imgServerUrl, getTrend, apiKey } from "../../constant";
 import { useEffect, useState } from "react";
 import textDots from "../../helper";
@@ -30,7 +29,7 @@ const Intro = (props) => {
     return temp.map((item) => {
       console.log(item, "ytr");
       const { id, original_title, overview, name } = item;
-      const imgUrl = `${imgServerUrl}${item.backdrop_path}`;
+      const imgUrl = `${imgServerUrl}${item.poster_path}`;
 
       return (
         <div className="slider-item" key={id}>

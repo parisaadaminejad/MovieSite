@@ -1,8 +1,10 @@
 import { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useAuthState } from "../../context";
 import Style from "./style";
 
 const Header = () => {
+  const userDetails = useAuthState();
   const [scroll, setScroll] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -10,14 +12,20 @@ const Header = () => {
     });
   }, []);
 
+  function handleLoginButton() {
+    if (!userDetails.token) {
+      return <Link to={`/login/`}>login</Link>;
+    } else {
+      return <Link to={`/userProfile/`}>profile</Link>;
+    }
+  }
+
   return (
     <Style>
       <header id="header" className={scroll ? "scroll" : ""}>
         <div className="header-wrap">
           <div className="header-top">
-            <button className="header-btn">
-              <Link>login/register</Link>
-            </button>
+            <button className="header-btn">{handleLoginButton()}</button>
           </div>
           <div className="navbar">
             <div className="navbar-logo">
