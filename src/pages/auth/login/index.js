@@ -20,28 +20,30 @@ const Login = () => {
       console.log(error);
     }
   };
-  const changeEmail = (e) => {
-    setEmail(e.target.value);
-    console.log(e.target.value);
-  };
-  const changePassword = (e) => {
-    setPassword(e.target.value);
-  };
+
   return (
     <Fragment>
-      <form>
-        <div>
-          <label htmlFor="email">username</label>
-          <input onChange={changeEmail} type="text" id="email" />
+      <Style>
+        <div className="page-login">
+          <div className="login">
+            <h2>login via email</h2>
+            <p>please enter your email and password</p>
+            <form>
+              <div className="page-box">
+                <input type="text" id="email" placeholder="username" />
+              </div>
+              <div className="page-box">
+                <input type="password" id="password" placeholder="password" />
+              </div>
+              <div className="page-box">
+                <button onClick={handelLogin} disabled={loading}>
+                  login
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-        <div>
-          <label htmlFor="password">password</label>
-          <input onChange={changePassword} type="password" id="password" />
-        </div>
-      </form>
-      <button onClick={handelLogin} disabled={loading}>
-        login
-      </button>
+      </Style>
     </Fragment>
   );
 };
