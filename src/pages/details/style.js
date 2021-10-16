@@ -36,8 +36,13 @@ const Style = styled.div`
   .detail-title {
     position: absolute;
     bottom: 100px;
-    left: 40px;
+    top: 118px;
+    left: 95px;
     width: 40%;
+    padding: 10px;
+    background: black;
+    opacity: 0.7;
+    box-shadow: 1px 1px 1px #000000;
     & h1 {
       color: ${theme.orange};
     }

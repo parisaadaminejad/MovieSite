@@ -65,6 +65,10 @@ const Style = styled.div`
       margin-bottom: 28px;
       color: ${theme.white};
       background: ${theme.orange};
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 `;

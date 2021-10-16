@@ -3,6 +3,8 @@ import { Link, useLocation, useHistory, useParams } from "react-router-dom";
 import Header from "../../layout/header";
 import Intro from "../../layout/intro";
 import { useAuthDispatch, useAuthState, logout } from "../../context";
+import NewFilms from "../../layout/newfilms";
+
 const Home = () => {
   const { search } = useLocation();
   const history = useHistory();
@@ -26,6 +28,7 @@ const Home = () => {
       {/* {changeButton()} */}
       <Header />
       <Intro />
+      <NewFilms />
     </Fragment>
   );
 };

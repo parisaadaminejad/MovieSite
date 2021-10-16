@@ -1,6 +1,7 @@
 import { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuthState } from "../../context";
+import NewFilms from "../newfilms";
 import Style from "./style";
 
 const Header = () => {
