@@ -10,17 +10,17 @@ const theme = {
 const Style = styled.div`
   .page-login {
     position: relative;
-    background: black;
+    background: ${theme.black};
     min-height: 100vh;
     width: 100vw;
     background-image: radial-gradient(at bottom, #ec7532, #121212 70%);
 
     & .login {
       position: absolute;
-      top: 50%;
+      top: 60%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 500px;
+      width: 400px;
       background: ${theme.black};
       box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
       border-radius: 10px;

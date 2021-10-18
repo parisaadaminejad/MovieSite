@@ -4,18 +4,15 @@ import Header from "../../layout/header";
 import Intro from "../../layout/intro";
 import { useAuthDispatch, useAuthState, logout } from "../../context";
 import NewFilms from "../../layout/newfilms";
+import Search from "../../component/search";
+import Popular from "../../layout/popular";
 
 const Home = () => {
   const { search } = useLocation();
-  const history = useHistory();
-  const dispatch = useAuthDispatch();
+
   const userDatails = useAuthState();
   console.log(userDatails.gravatar);
 
-  const handleLogOut = () => {
-    logout(dispatch);
-    history.push("/login");
-  };
   // const changeButton = () => {
   //   if (userDatails.userName) {
   //     return <button onClick={handleLogOut}>logout</button>;
@@ -29,6 +26,8 @@ const Home = () => {
       <Header />
       <Intro />
       <NewFilms />
+      <Search />
+      <Popular />
     </Fragment>
   );
 };

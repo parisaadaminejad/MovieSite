@@ -1,16 +1,49 @@
 import { Fragment } from "react";
-import { useAuthState } from "../../../context";
+
 import { MD5 } from "../../../helper/md5";
+import { useHistory } from "react-router-dom";
+import { useAuthDispatch, useAuthState, logout } from "../../../context";
+import Style from "./style";
+
 const UserProfile = () => {
   const userDetails = useAuthState();
+  const history = useHistory();
+  const dispatch = useAuthDispatch();
+  const handleLogOut = () => {
+    logout(dispatch);
+    history.push("/login");
+  };
   return (
-    <Fragment>
-      <p>{userDetails.email}</p>
-      <p>{userDetails.nationalCode}</p>
-      <p>{userDetails.username}</p>
-      <p>{userDetails.family}</p>
-      <img src={`https://www.gravatar.com/avatar/${MD5(userDetails.email)}`} />
-    </Fragment>
+    <Style>
+      <Fragment>
+        <div className="page-userprofile">
+          <div className="userprofile-box">
+            <div className="userprofile-image">
+              <img
+                src={`https://www.gravatar.com/avatar/${MD5(
+                  userDetails.email
+                )}`}
+              />
+            </div>
+            <p>{userDetails.username}</p>
+            <p>{userDetails.family}</p>
+            <div className="userprofile-item">
+              <p>email</p>
+              <div userprofile-icon>
+                <i className="fa fa-envelope"></i>
+                <span>{userDetails.email}</span>
+              </div>
+              <p>nationalCode</p>
+              <div className="userprofile-icon">
+                <i className="fa fa-pencil-alt"></i>
+                <span>{userDetails.nationalCode}</span>
+              </div>
+            </div>
+            <button onClick={handleLogOut}>logout</button>
+          </div>
+        </div>
+      </Fragment>
+    </Style>
   );
 };
 export default UserProfile;

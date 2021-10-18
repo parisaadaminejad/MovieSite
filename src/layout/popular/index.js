@@ -1,15 +1,15 @@
 import { imgServerUrl, apiKey } from "../../constant";
 import { Fragment, useEffect, useState } from "react";
 import textDots from "../../helper";
-import { Link } from "react-router-dom";
 import Style from "./style";
+import { Link } from "react-router-dom";
 
-const NewFilms = (props) => {
+const Popular = (props) => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=1`
+      `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`
     )
       .then((response) => {
         return response.json();
@@ -32,9 +32,6 @@ const NewFilms = (props) => {
         <Fragment>
           <li className="new-item" key={id}>
             <Link to={`/details/${id}`}>
-              <div className="btn">
-                <i className="fa fa-play"></i>
-              </div>
               <div className="new-box">
                 <div className="new-img">
                   <img src={imgUrl} alt={original_title} />
@@ -50,10 +47,10 @@ const NewFilms = (props) => {
   return (
     <Style>
       <div className="new-title" id="news">
-        <h2>new in</h2>
+        <h2>popular</h2>
       </div>
       <ul>{RenderForm()}</ul>
     </Style>
   );
 };
-export default NewFilms;
+export default Popular;

@@ -28,6 +28,7 @@ const Header = () => {
           <div className="header-top">
             <button className="header-btn">{handleLoginButton()}</button>
           </div>
+
           <div className="navbar">
             <div className="navbar-logo">
               <span className="logo">m</span>
@@ -39,7 +40,7 @@ const Header = () => {
                   <Link className="active">home</Link>
                 </li>
                 <li className="navbar-menu-item">
-                  <Link>news</Link>
+                  <a href="#news">news</a>
                 </li>
                 <li className="navbar-menu-item">
                   <Link>contact us</Link>

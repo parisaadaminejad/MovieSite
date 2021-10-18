@@ -3,6 +3,7 @@ import { Route, BrowserRouter, Switch } from "react-router-dom";
 import Loader from "../component/loader";
 import { PublicRoute, PriveteRoute } from "./config";
 import isLoggedin from "../helper/isLoggedin";
+import Layout from "../layout";
 const Home = lazy(() => import("../pages/home"));
 const Login = lazy(() => import("../pages/auth/login"));
 // const Register = lazy(() => import("../pages/auth/register"));
@@ -14,39 +15,41 @@ const MainRouter = () => {
   const isAuthenticated = isLoggedin();
   return (
     <BrowserRouter>
-      <Suspense fallback={<Loader />}>
-        <Switch>
-          <PublicRoute path="/" exact isAuthenticated={isAuthenticated}>
-            <Home />
-          </PublicRoute>
-          <PublicRoute
-            path="/login"
-            exact
-            restricted={true}
-            isAuthenticated={isAuthenticated}
-          >
-            <Login />
-          </PublicRoute>
+      <Layout>
+        <Suspense fallback={<Loader />}>
+          <Switch>
+            <PublicRoute path="/" exact isAuthenticated={isAuthenticated}>
+              <Home />
+            </PublicRoute>
+            <PublicRoute
+              path="/login"
+              exact
+              restricted={true}
+              isAuthenticated={isAuthenticated}
+            >
+              <Login />
+            </PublicRoute>
 
-          <PublicRoute
-            path="/details/:id"
-            exact
-            isAuthenticated={isAuthenticated}
-          >
-            <Details />
-          </PublicRoute>
-          <PriveteRoute
-            path="/userProfile"
-            exact
-            isAuthenticated={isAuthenticated}
-          >
-            <UserProfile />
-          </PriveteRoute>
-          <Route path="*">
-            <NotFound />
-          </Route>
-        </Switch>
-      </Suspense>
+            <PublicRoute
+              path="/details/:id"
+              exact
+              isAuthenticated={isAuthenticated}
+            >
+              <Details />
+            </PublicRoute>
+            <PriveteRoute
+              path="/userProfile"
+              exact
+              isAuthenticated={isAuthenticated}
+            >
+              <UserProfile />
+            </PriveteRoute>
+            <Route path="*">
+              <NotFound />
+            </Route>
+          </Switch>
+        </Suspense>
+      </Layout>
     </BrowserRouter>
   );
 };
