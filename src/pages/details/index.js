@@ -3,6 +3,7 @@ import { Fragment, useEffect, useState } from "react";
 import { apiKey } from "../../constant";
 import { imgServerUrl } from "../../constant";
 import Header from "../../layout/header";
+import textDots from "../../helper";
 import Style from "./style";
 
 const Details = (props) => {
@@ -38,7 +39,7 @@ const Details = (props) => {
         <div className="detail-title">
           <h1>{original_title}</h1>
 
-          <p>{overview}</p>
+          <p>{textDots(overview, 100)}</p>
           <p>{release_date}</p>
           <p>vote_avrege:{` ${Math.ceil(vote_average)}`}</p>
         </div>

@@ -22,7 +22,7 @@ export async function loginUser(dispatch, loginPayload) {
     console.log(error);
   }
 }
-export async function logout(dispatch) {
+export function logout(dispatch) {
   dispatch({ type: "LOGOUT" });
   localStorage.removeItem("currentUser");
 }

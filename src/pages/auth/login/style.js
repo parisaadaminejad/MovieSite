@@ -6,24 +6,26 @@ const theme = {
   white: "#ffffff",
   black: "#222327",
   darkgrey: "rgb(55, 56, 62)",
+  oranggray: "#121212",
 };
+
 const Style = styled.div`
   .page-login {
-    position: relative;
+    display: flex;
+    justify-content: center;
     background: ${theme.black};
-    min-height: 100vh;
-    width: 100vw;
-    background-image: radial-gradient(at bottom, #ec7532, #121212 70%);
-
+    background-image: radial-gradient(
+      at bottom,
+      ${theme.orange},
+      ${theme.oranggray} 70%
+    );
     & .login {
-      position: absolute;
-      top: 60%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       width: 400px;
       background: ${theme.black};
       box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
       border-radius: 10px;
+      margin-top: 150px;
+      margin-bottom: 20px;
       & h2 {
         color: ${theme.white};
         margin: 10px 0 14px 30px;
@@ -41,33 +43,34 @@ const Style = styled.div`
         margin-left: 30px;
       }
     }
-  }
-  .page-box {
-    margin: 15px 30px;
-    font-size: 16px;
-    line-height: 52px;
 
-    & input {
-      width: 100%;
+    .page-box {
+      margin: 15px 30px;
+      font-size: 16px;
       line-height: 52px;
-      border-radius: 5px;
-      border: none;
-      padding: 0 16px;
-      margin-bottom: 28px;
-      background-color: ${theme.darkgrey};
-    }
-    & button {
-      width: 100%;
-      line-height: 52px;
-      border-radius: 5px;
-      border: none;
-      padding: 0 16px;
-      margin-bottom: 28px;
-      color: ${theme.white};
-      background: ${theme.orange};
 
-      &:hover {
-        cursor: pointer;
+      & input {
+        width: 100%;
+        line-height: 52px;
+        border-radius: 5px;
+        border: none;
+        padding: 0 16px;
+        margin-bottom: 28px;
+        background-color: ${theme.darkgrey};
+      }
+      & button {
+        width: 100%;
+        line-height: 52px;
+        border-radius: 5px;
+        border: none;
+        padding: 0 16px;
+        margin-bottom: 28px;
+        color: ${theme.white};
+        background: ${theme.orange};
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }

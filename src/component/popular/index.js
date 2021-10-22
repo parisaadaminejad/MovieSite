@@ -32,6 +32,9 @@ const Popular = (props) => {
         <Fragment>
           <li className="new-item" key={id}>
             <Link to={`/details/${id}`}>
+              <div className="btn">
+                <i className="fa fa-play"></i>
+              </div>
               <div className="new-box">
                 <div className="new-img">
                   <img src={imgUrl} alt={original_title} />
@@ -46,7 +49,7 @@ const Popular = (props) => {
   };
   return (
     <Style>
-      <div className="new-title" id="news">
+      <div className="new-title" id="popular">
         <h2>popular</h2>
       </div>
       <ul>{RenderForm()}</ul>

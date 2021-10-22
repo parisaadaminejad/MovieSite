@@ -5,54 +5,65 @@ const theme = {
   white: "#ffffff",
   black: "#222327",
   darkgrey: "rgb(55, 56, 62)",
+  blackgrey: "#676462b0",
+  oranggray: "#121212",
 };
+
 const Style = styled.div`
   .page-userprofile {
-    position: relative;
-    min-height: 100vh;
-    width: 100vw;
-    background: ${theme.black} black;
-    background-image: radial-gradient(at bottom, #ec7532, #121212 70%);
-    & .userprofile-box {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    background: ${theme.black};
+    background-image: radial-gradient(
+      at bottom,
+      ${theme.orange},
+      ${theme.oranggray} 70%
+    );
+    .userprofile-box {
+      margin-top: 150px;
+      margin-bottom: 30px;
       width: 400px;
-      background: aqua;
+      background: ${theme.darkgrey};
       border-radius: 10px;
-      & button {
-        width: 100%;
-        line-height: 52px;
-        border-radius: 5px;
-        border: none;
-        /* padding: 0 16px; */
-        /* margin-bottom: 28px; */
-        margin: 10px 10px 10px 10px;
-        color: ${theme.white};
-        background: ${theme.orange};
-      }
       & .userprofile-image {
         text-align: center;
-        margin: 10px 0;
+        margin-top: 10px;
         & img {
-          border-radius: 20px;
+          border-radius: 15px;
         }
       }
-      & p {
+      & .userprofile-name {
+        color: ${theme.white};
+        padding: 10px 0;
         text-align: center;
       }
-    }
-    & .userprofile-item {
-      background: blue;
-      border-radius: 7px;
-      margin: 10px;
-      & p {
-        text-transform: uppercase;
-        padding: 10px;
-      }
-      & .userprofile-icon {
-        padding: 5px 10px;
+      & .userprofile-item {
+        background: ${theme.blackgrey};
+        color: ${theme.white};
+        border-radius: 7px;
+        margin: 10px;
+        & p {
+          text-transform: uppercase;
+          padding: 15px 40px;
+        }
+        & .userprofile-icon {
+          padding: 5px 10px;
+          span {
+            margin: 0 15px;
+          }
+        }
+        & button {
+          width: 100%;
+          line-height: 52px;
+          border-radius: 5px;
+          border: none;
+          margin-top: 15px;
+          color: ${theme.white};
+          background: ${theme.orange};
+          &:hover {
+            cursor: pointer;
+          }
+        }
       }
     }
   }

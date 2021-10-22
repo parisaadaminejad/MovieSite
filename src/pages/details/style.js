@@ -1,9 +1,6 @@
+import { theme } from "../../component/theme";
 import styled from "styled-components";
 
-const theme = {
-  orange: "#ec7532",
-  white: "#ffffff",
-};
 const Style = styled.div`
   .detail {
     position: relative;
@@ -40,9 +37,9 @@ const Style = styled.div`
     left: 95px;
     width: 40%;
     padding: 10px;
-    background: black;
+    background: ${theme.black};
     opacity: 0.7;
-    box-shadow: 1px 1px 1px #000000;
+    box-shadow: 1px 1px 1px ${theme.black};
     & h1 {
       color: ${theme.orange};
     }

@@ -9,7 +9,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispath = useAuthDispatch();
-  const { loading, errorMessage } = useAuthState();
+
   const handelLogin = async (e) => {
     e.preventDefault();
     try {
@@ -36,9 +36,7 @@ const Login = () => {
                 <input type="password" id="password" placeholder="password" />
               </div>
               <div className="page-box">
-                <button onClick={handelLogin} disabled={loading}>
-                  login
-                </button>
+                <button onClick={handelLogin}>login</button>
               </div>
             </form>
           </div>

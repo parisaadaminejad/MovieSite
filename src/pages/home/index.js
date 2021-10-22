@@ -1,11 +1,12 @@
 import { Fragment } from "react";
-import { Link, useLocation, useHistory, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Header from "../../layout/header";
-import Intro from "../../layout/intro";
-import { useAuthDispatch, useAuthState, logout } from "../../context";
-import NewFilms from "../../layout/newfilms";
+import Intro from "../../component/intro";
+import { useAuthState } from "../../context";
+import NewFilms from "../../component/newfilms";
 import Search from "../../component/search";
-import Popular from "../../layout/popular";
+import Popular from "../../component/popular";
+import Footer from "../../layout/footer";
 
 const Home = () => {
   const { search } = useLocation();
@@ -13,16 +14,8 @@ const Home = () => {
   const userDatails = useAuthState();
   console.log(userDatails.gravatar);
 
-  // const changeButton = () => {
-  //   if (userDatails.userName) {
-  //     return <button onClick={handleLogOut}>logout</button>;
-  //   } else {
-  //     return <button onClick={handleLogOut}>login</button>;
-  //   }
-  // };
   return (
     <Fragment>
-      {/* {changeButton()} */}
       <Header />
       <Intro />
       <NewFilms />

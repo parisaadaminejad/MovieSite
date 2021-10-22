@@ -6,7 +6,6 @@ import isLoggedin from "../helper/isLoggedin";
 import Layout from "../layout";
 const Home = lazy(() => import("../pages/home"));
 const Login = lazy(() => import("../pages/auth/login"));
-// const Register = lazy(() => import("../pages/auth/register"));
 const UserProfile = lazy(() => import("../pages/auth/userProfile"));
 const Details = lazy(() => import("../pages/details"));
 const NotFound = lazy(() => import("../pages/notFound"));

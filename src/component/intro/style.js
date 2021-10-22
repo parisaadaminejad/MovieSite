@@ -1,11 +1,5 @@
+import { theme } from "../../component/theme";
 import styled from "styled-components";
-
-const theme = {
-  gray: "#aca9a9",
-  orange: "#ec7532",
-  white: "#ffffff",
-  black: "#000000",
-};
 
 const Style = styled.div`
   .slider {
@@ -22,11 +16,9 @@ const Style = styled.div`
 
     .slick-next {
       background: green;
-      /* right: 70px; */
     }
     .slick-prev {
       background: green;
-      /* left: 70px; */
     }
     .slick-dots {
       bottom: 15px;

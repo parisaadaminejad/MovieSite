@@ -16,6 +16,7 @@ const UserProfile = () => {
   return (
     <Style>
       <Fragment>
+        <div className="background"></div>
         <div className="page-userprofile">
           <div className="userprofile-box">
             <div className="userprofile-image">
@@ -25,11 +26,11 @@ const UserProfile = () => {
                 )}`}
               />
             </div>
-            <p>{userDetails.username}</p>
-            <p>{userDetails.family}</p>
+            <p className="userprofile-name">{userDetails.username}</p>
+            <p className="userprofile-name">{userDetails.family}</p>
             <div className="userprofile-item">
               <p>email</p>
-              <div userprofile-icon>
+              <div className="userprofile-icon">
                 <i className="fa fa-envelope"></i>
                 <span>{userDetails.email}</span>
               </div>
@@ -38,8 +39,8 @@ const UserProfile = () => {
                 <i className="fa fa-pencil-alt"></i>
                 <span>{userDetails.nationalCode}</span>
               </div>
+              <button onClick={handleLogOut}>logout</button>
             </div>
-            <button onClick={handleLogOut}>logout</button>
           </div>
         </div>
       </Fragment>

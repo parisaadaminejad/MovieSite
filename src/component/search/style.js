@@ -1,10 +1,6 @@
+import { theme } from "../../component/theme";
 import styled from "styled-components";
 
-const theme = {
-  orange: "#ec7532",
-  gray: "#d8d8d8",
-  darkgray: "#938e8e",
-};
 const Style = styled.div`
   .search {
     position: relative;

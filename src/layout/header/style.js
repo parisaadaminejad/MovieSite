@@ -1,19 +1,14 @@
 import styled from "styled-components";
+import { theme } from "../../component/theme";
 
-const theme = {
-  gray: "#aca9a9",
-  orange: "#ec7532",
-  white: "#ffffff",
-  black: "#000000",
-};
-
-const Style = styled.div`
+const Style = styled.header`
   #header {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 3;
+    z-index: 200;
+
     & .header-wrap {
       margin: 0 40px;
     }
@@ -61,6 +56,7 @@ const Style = styled.div`
         .logo-text {
           letter-spacing: 3px;
           color: ${theme.white};
+          font-size: 30px;
         }
       }
       .navbar-menu {
@@ -98,7 +94,7 @@ const Style = styled.div`
             right: 0;
             border-radius: 50px;
             display: block;
-            box-shadow: 0 0 20px 0 #fbbd61;
+            box-shadow: 0 0 20px 0 ${theme.oranglight};
           }
           & li a::after {
             transition: all 0.4s ease;
@@ -115,5 +111,11 @@ const Style = styled.div`
       }
     }
   }
+  @media (max-width: 992px) {
+    #header {
+      display: none;
+    }
+  }
 `;
+
 export default Style;
