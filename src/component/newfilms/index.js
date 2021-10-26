@@ -1,4 +1,4 @@
-import { imgServerUrl, apiKey } from "../../constant";
+import { imgServerUrl, apiKey, getNewfilm } from "../../constant";
 import { Fragment, useEffect, useState } from "react";
 import textDots from "../../helper";
 import { Link } from "react-router-dom";
@@ -8,9 +8,7 @@ const NewFilms = (props) => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=1`
-    )
+    fetch(`${getNewfilm}?api_key=${apiKey}&language=en-US&page=1`)
       .then((response) => {
         return response.json();
       })

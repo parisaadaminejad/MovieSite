@@ -11,7 +11,7 @@ const Details = (props) => {
   const { id } = useParams();
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`
+      `https://murmuring-tundra-31743.herokuapp.com/movies/3/movie/${id}?api_key=${apiKey}&language=en-US`
     )
       .then((response) => {
         return response.json();

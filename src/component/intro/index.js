@@ -25,7 +25,7 @@ const Intro = (props) => {
 
   const RenderForm = () => {
     // const result = get(movies, "results", []);
-    const temp = movies.slice(0, 6);
+    const temp = movies.slice(0, 10);
     return temp.map((item) => {
       console.log(item, "ytr");
       const { id, original_title, overview, name } = item;

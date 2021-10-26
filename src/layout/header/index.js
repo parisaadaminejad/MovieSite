@@ -42,7 +42,7 @@ const Header = () => {
                     </Link>
                   </li>
                   <li className="navbar-menu-item">
-                    <a href="#news">news</a>
+                    <a href="#news">new</a>
                   </li>
                   <li className="navbar-menu-item">
                     <a href="#popular">popular</a>

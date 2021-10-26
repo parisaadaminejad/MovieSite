@@ -18,8 +18,9 @@ const Home = () => {
     <Fragment>
       <Header />
       <Intro />
-      <NewFilms />
       <Search />
+      <NewFilms />
+
       <Popular />
     </Fragment>
   );

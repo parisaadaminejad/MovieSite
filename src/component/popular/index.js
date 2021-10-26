@@ -1,4 +1,4 @@
-import { imgServerUrl, apiKey } from "../../constant";
+import { imgServerUrl, apiKey, baseUrl } from "../../constant";
 import { Fragment, useEffect, useState } from "react";
 import textDots from "../../helper";
 import Style from "./style";
@@ -8,9 +8,7 @@ const Popular = (props) => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`
-    )
+    fetch(`${baseUrl}/movie/popular?api_key=${apiKey}&language=en-US&page=1`)
       .then((response) => {
         return response.json();
       })

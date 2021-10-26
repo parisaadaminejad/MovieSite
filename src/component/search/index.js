@@ -1,6 +1,6 @@
 import { useState, useEffect, Fragment } from "react";
 import { Link } from "react-router-dom";
-import { imgServerUrl, apiKey } from "../../constant";
+import { imgServerUrl, apiKey, baseUrl } from "../../constant";
 import textDots from "../../helper";
 import Style from "./style";
 
@@ -16,7 +16,7 @@ const Search = () => {
       setLoading(true);
 
       fetch(
-        `https://murmuring-tundra-31743.herokuapp.com/movies/3/search/multi?api_key=${apiKey}&language=en-US&page=1&include_adult=false&query=${query}`
+        `${baseUrl}/search/movie?api_key=${apiKey}&language=en-US&page=1&include_adult=false&query=${query}`
       )
         .then((response) => {
           return response.json();
@@ -36,35 +36,27 @@ const Search = () => {
     setSearch(e.target.value);
     console.log(e.target.value);
   };
-  const RenderForm = () => {
-    const noImage = "Unkown.jpg";
-    const temp = movies.slice(0, 4);
-    return temp.map((item) => {
-      const { id, original_title, poster_path } = item;
+  const RenderFarm = () => {
+    return movies.map((item) => {
+      const { id, original_title } = item;
       const imgUrl = `${imgServerUrl}${item.poster_path}`;
-      const checkImage =
-        item.hasOwnProperty("poster_path") && poster_path !== null
-          ? imgUrl
-          : noImage;
       return (
-        <Fragment>
-          <li className="new-item" key={id}>
-            <Link to={`/details/${id}`}>
-              <div className="new-box">
-                <div className="new-img">
-                  <img src={imgUrl} alt={original_title} />
-                </div>
-                <h2>{textDots(original_title, 10)}</h2>
-                <div className="logo">
-                  <img src={checkImage} alt={item.original_title} />
-                </div>
+        <div className="new-item" key={id}>
+          <Link to={`/details/${id}`}>
+            <div className="new-box">
+              <h5>{textDots(original_title, 8)}</h5>
+              <div className="new-img">
+                <img src={imgUrl} onError={defultImag} alt={original_title} />
               </div>
-            </Link>
-          </li>
-        </Fragment>
+            </div>
+          </Link>
+        </div>
       );
     });
   };
+  function defultImag(e) {
+    e.target.src = "/Unkown.jpg";
+  }
   return (
     <Style>
       <div className="search">
@@ -75,7 +67,7 @@ const Search = () => {
         />
         <i className="fa fa-search"></i>
       </div>
-      <ul>{RenderForm()}</ul>
+      {movies.length > 0 && <div className="search-box">{RenderFarm()}</div>}
     </Style>
   );
 };
