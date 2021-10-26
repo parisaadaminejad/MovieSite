@@ -1,5 +1,6 @@
 import { theme } from "../../../component/theme";
 import styled from "styled-components";
+
 const HeaderStyle = styled.div`
   background: ${theme.black};
   .mobile-header {
@@ -23,10 +24,13 @@ const HeaderStyle = styled.div`
           padding: 10px 20px;
           & .header-btn {
             border-radius: 20px;
-
+            background: none;
             padding: 6px 15px;
             font-size: 15px;
-            border: 1px solid;
+            border: 2px solid ${theme.white};
+            a {
+              color: ${theme.white};
+            }
           }
           & a {
             i {

@@ -1,13 +1,14 @@
+import { theme } from "../../../component/theme";
 import styled from "styled-components";
-const theme = {
-  gray: "#aca9a9",
-  orange: "#ec7532",
-  white: "#ffffff",
-  black: "#222327",
-  darkgrey: "rgb(55, 56, 62)",
-  blackgrey: "#676462b0",
-  oranggray: "#121212",
-};
+// const theme = {
+//   gray: "#aca9a9",
+//   orange: "#ec7532",
+//   white: "#ffffff",
+//   black: "#222327",
+//   darkgrey: "rgb(55, 56, 62)",
+//   blackgrey: "#676462b0",
+//   oranggray: "#121212",
+// };
 
 const Style = styled.div`
   .page-userprofile {

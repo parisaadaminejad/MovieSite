@@ -7,4 +7,7 @@ export const theme = {
   graydrak: "#3f3f3f",
   graylight: "#938e8e",
   orangegray: "#dc603085",
+  darkgrey: "rgb(55, 56, 62)",
+  blackgrey: "#676462b0",
+  oranggray: "#121212",
 };

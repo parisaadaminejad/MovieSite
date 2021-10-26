@@ -7,8 +7,8 @@ const Style = styled.div`
     margin-bottom: 40px;
     & .btn {
       position: absolute;
-      top: 50%;
-      left: 50%;
+      top: 46%;
+      left: 44%;
       transform: translate(-50%, -50%);
       z-index: 101;
       opacity: 0;

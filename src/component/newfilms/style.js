@@ -12,8 +12,8 @@ const Style = styled.div`
     }
     & .btn {
       position: absolute;
-      top: 50%;
-      left: 50%;
+      top: 46%;
+      left: 48%;
       transform: translate(-50%, -50%);
       /* display: none; */
       z-index: 100;
