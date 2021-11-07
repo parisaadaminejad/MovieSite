@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import textDots from "../../helper";
 import Style from "./style";
 
-const Intro = (props) => {
+const Intro = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -28,8 +28,8 @@ const Intro = (props) => {
     const temp = movies.slice(0, 10);
     return temp.map((item) => {
       console.log(item, "ytr");
-      const { id, original_title, overview, name } = item;
-      const imgUrl = `${imgServerUrl}${item.poster_path}`;
+      const { id, original_title, name, poster_path } = item;
+      const imgUrl = `${imgServerUrl}${poster_path}`;
 
       return (
         <div className="slider-item" key={id}>
@@ -43,7 +43,6 @@ const Intro = (props) => {
               <div className="slider-title">
                 <span>{name}</span>
                 <h1>{textDots(original_title, 10)}</h1>
-                <p>{textDots(overview, 30)}</p>
                 <div className="slider-btn">
                   <Link className="slider-link" to={`/details/${id}`}>
                     <i className="fa fa-play"></i>

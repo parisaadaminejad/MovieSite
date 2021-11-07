@@ -21,7 +21,7 @@ const Style = styled.header`
       color: ${theme.white};
       transition: all 0.4s ease-in-out;
     }
-    &.scroll a {
+    .scroll a {
       color: ${theme.white};
     }
     &.scroll .header-top {
@@ -30,7 +30,7 @@ const Style = styled.header`
 
     .header-top {
       direction: rtl;
-      & button {
+      button {
         text-transform: uppercase;
         padding: 10px 10px;
         margin-top: 20px;
@@ -46,8 +46,9 @@ const Style = styled.header`
     .navbar {
       display: flex;
       justify-content: space-between;
-      & .navbar-logo {
+      .navbar-logo {
         text-transform: uppercase;
+        margin: 5px;
         .logo {
           font-size: 30px;
           margin-right: 30px;
@@ -62,7 +63,7 @@ const Style = styled.header`
       .navbar-menu {
         position: relative;
 
-        & ul {
+        ul {
           display: flex;
           border-bottom: 1px solid ${theme.gray};
 
@@ -70,7 +71,7 @@ const Style = styled.header`
             position: relative;
             margin: 0;
 
-            & a {
+            a {
               font-size: 16px;
               font-weight: normal;
               line-height: 0.8em;

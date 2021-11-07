@@ -1,4 +1,4 @@
-import { useState, useEffect, Fragment } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { imgServerUrl, apiKey, baseUrl } from "../../constant";
 import textDots from "../../helper";

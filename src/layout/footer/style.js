@@ -6,15 +6,15 @@ const Style = styled.div`
     background: ${theme.black};
 
     padding: 30px 0;
-    & .footer-social {
+    .footer-social {
       border-bottom: 1px solid ${theme.graydrak};
       margin: 0 20px;
-      & ul {
+      ul {
         display: flex;
         justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
-        & a {
+        a {
           display: block;
           padding: 20px;
           color: ${theme.gray};
@@ -26,7 +26,7 @@ const Style = styled.div`
         }
       }
     }
-    & .footer-text {
+    .footer-text {
       color: ${theme.orange};
       text-align: center;
       padding: 20px 0;

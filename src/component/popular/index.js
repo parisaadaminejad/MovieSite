@@ -23,20 +23,21 @@ const Popular = (props) => {
   const RenderForm = () => {
     const temp = movies.slice(0, 5);
     return temp.map((item) => {
-      const { id, original_title } = item;
-      const imgUrl = `${imgServerUrl}${item.poster_path}`;
+      const { id, original_title, poster_path } = item;
+      const imgUrl = `${imgServerUrl}${poster_path}`;
 
       return (
         <Fragment>
           <li className="new-item" key={id}>
             <Link to={`/details/${id}`}>
-              <div className="btn">
-                <i className="fa fa-play"></i>
-              </div>
               <div className="new-box">
                 <div className="new-img">
                   <img src={imgUrl} alt={original_title} />
+                  <div className="btn">
+                    <i className="fa fa-play"></i>
+                  </div>
                 </div>
+
                 <h2>{textDots(original_title, 10)}</h2>
               </div>
             </Link>

@@ -21,7 +21,7 @@ const Style = styled.div`
       );
     }
 
-    & .detail-img {
+    .detail-img {
       img {
         width: 100%;
         background-position: center;
@@ -40,14 +40,20 @@ const Style = styled.div`
     background: ${theme.black};
     opacity: 0.7;
     box-shadow: 1px 1px 1px ${theme.black};
-    & h1 {
+    h1 {
       color: ${theme.orange};
     }
-    & p {
+    p {
       color: ${theme.white};
       margin-top: 10px;
       letter-spacing: 2px;
       line-height: 2;
+    }
+  }
+  @media (max-width: 770px) {
+    .detail-title {
+      width: 76%;
+      left: 50px;
     }
   }
 `;

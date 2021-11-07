@@ -16,7 +16,6 @@ const UserProfile = () => {
   return (
     <Style>
       <Fragment>
-        <div className="background"></div>
         <div className="page-userprofile">
           <div className="userprofile-box">
             <div className="userprofile-image">

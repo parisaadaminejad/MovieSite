@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Style = styled.div`
   .slider {
     overflow: hidden;
-    & .slider-container {
+    .slider-container {
       margin: 0 40px;
     }
 
@@ -43,7 +43,7 @@ const Style = styled.div`
           rgba(0, 0, 0, 0) 100%
         );
       }
-      & .slider-title {
+      .slider-title {
         position: absolute;
         top: 200px;
         z-index: 10;
@@ -66,7 +66,7 @@ const Style = styled.div`
           line-height: 2;
           margin-top: 10px;
         }
-        & .slider-btn {
+        .slider-btn {
           display: flex;
           margin-top: 25px;
 
@@ -87,6 +87,11 @@ const Style = styled.div`
           }
         }
       }
+    }
+  }
+  @media (max-width: 870px) {
+    .slider .slider-item .slider-title {
+      top: 100px;
     }
   }
 `;

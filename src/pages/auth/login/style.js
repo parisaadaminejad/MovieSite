@@ -19,14 +19,14 @@ const Style = styled.div`
       ${theme.orange},
       ${theme.oranggray} 70%
     );
-    & .login {
+    .login {
       width: 400px;
       background: ${theme.black};
       box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
       border-radius: 10px;
       margin-top: 150px;
       margin-bottom: 20px;
-      & h2 {
+      h2 {
         color: ${theme.white};
         margin: 10px 0 14px 30px;
         font-weight: 700;
@@ -34,7 +34,7 @@ const Style = styled.div`
         text-transform: uppercase;
         font-size: 20px;
       }
-      & p {
+      p {
         color: ${theme.gray};
         font-size: 15px;
         font-weight: 400;

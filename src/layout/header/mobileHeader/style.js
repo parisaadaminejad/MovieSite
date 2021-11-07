@@ -6,23 +6,23 @@ const HeaderStyle = styled.div`
   .mobile-header {
     margin: 0 20px;
     padding-top: 20px;
-    & .mobile-header-logo {
+    .mobile-header-logo {
       text-transform: uppercase;
-      & span {
+      span {
         font-size: 30px;
       }
-      & .logo-item {
+      .logo-item {
         font-size: 30px;
         color: ${theme.orange};
         padding-right: 20px;
       }
     }
-    & .mobile-header-rightside {
-      & ul {
+    .mobile-header-rightside {
+      ul {
         display: flex;
-        & li {
+        li {
           padding: 10px 20px;
-          & .header-btn {
+          .header-btn {
             border-radius: 20px;
             background: none;
             padding: 6px 15px;
@@ -32,7 +32,7 @@ const HeaderStyle = styled.div`
               color: ${theme.white};
             }
           }
-          & a {
+          a {
             i {
               color: ${theme.white};
               font-size: 30px;
@@ -49,7 +49,6 @@ const HeaderStyle = styled.div`
   }
   .mobile-background {
     position: fixed;
-    width: 100wv;
     width: 100vw;
     height: 100vh;
     background: ${theme.black};
@@ -85,6 +84,7 @@ const HeaderStyle = styled.div`
     .mobile-header {
       display: flex;
       justify-content: space-between;
+      align-items: center;
 
       & .mobile-header-logo {
         .logo {
